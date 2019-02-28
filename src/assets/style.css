@@ -1,0 +1,139 @@
+	html{
+	    font-family: monospace;
+	}
+	.row{
+		max-width: 1400px;
+		width: 100%;
+	    margin: 20px auto;
+        background: #000000c4;
+    	position: relative;
+	}
+	.email{
+	    margin-bottom: 30px;
+        border-bottom: 6px solid whitesmoke;
+    	padding-bottom: 20px;
+	    border-radius: 50px;
+	}
+	.email-img{
+		width: 300px;
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		z-index: 1;
+	}
+	.email-img img{
+		width: 100%;
+	    border-radius: 50%;
+	}
+	.email-info{
+	    width: calc(100% - 330px);
+	    display: inline-block;
+	    vertical-align: middle;
+	    padding-left: 70px;
+	    margin-left: -50px;
+	    background-color: whitesmoke;
+	    position: relative;
+        border-radius: 50px;
+	}
+	.fullname{
+		font-size: 22px;
+	}
+	.description{
+	    font-size: 15px;
+	}
+	
+	/* Style modal */
+	.modal{
+		position: fixed;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: #000000ab;
+	    z-index: 3;
+		display: none;
+	}
+	.modal .modal-content{
+		background-color: white;
+		padding: 50px 70px;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 400px;
+	}
+	.modal .modal-content .fullname{
+		text-align: center;
+	}
+	.modal .modal-content img{
+		height: 240px;
+		margin: 0 auto;
+		border-radius: 50%;
+	    display: block;
+	}
+	.modal .modal-content .description{
+	    text-align: center;
+	}
+	.modal .modal-content .stars{
+		text-align: center;
+	}
+	.modal .modal-content .issues{
+		text-align: center;
+	}
+	.modal .modal-content .username{
+		text-align: center;
+	}
+	.show{
+	    background: #3b3b3b;
+	    border-color: #3b3b3b;
+	    box-shadow: none;
+	    color: white;
+	    padding: 5px 20px;
+	    border-radius: 5px;
+	    float: right;
+	    margin: 0 40px 20px 0;
+	    transition: all .3s linear;
+	    cursor: pointer;
+	}
+	.show:hover{
+		background: white;
+		color: #3b3b3b;
+		transition: all .3s linear;
+	}
+	.close{
+	    border-color: transparent;
+	    background: transparent;
+	    position: absolute;
+	    cursor: pointer;
+	    top: 10px;
+	    right: 10px;
+	}
+
+	/* Responsive */
+	@media only screen and (max-width: 800px){
+		.email{
+			border-radius: 0;
+		}
+		.email-img{
+		    display: block;
+    		margin: 0 auto;
+		}
+		.email-info{
+		    width: 85%;
+		    margin: -25px auto 0px auto;
+		    display: block;
+		    padding: 50px 0px 50px 20px;
+		}
+		.modal-content{
+			height: 300px;
+			overflow-y: scroll;
+		}
+		.modal .modal-content img {
+    		height: 150px;
+		}
+	}
+	@media only screen and (max-width: 400px){
+		.email-img{
+			width: 240px;
+		}
+	}
